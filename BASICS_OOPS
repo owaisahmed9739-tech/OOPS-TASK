@@ -1,0 +1,58 @@
+
+// -->1) STUDENT NAME AGE MARKS;
+class student{
+    int age;
+    String name;
+    int marks;
+    public void DisplayDetails(){
+        System.out.println("NAME:"+name);
+        System.out.println("AGE:"+age);
+        System.out.println("MARKS:"+marks);
+    }
+}
+
+// -->2) bankAccountSystem
+class bankAccount{
+    String accountHolder;
+    double balance;
+    public void depositAmount(double x){
+        balance +=x;
+    }
+    public void withDrawAmount(double x){
+        balance -=x;
+        if(balance<=x){
+            System.out.println("insuffient balance");
+        }
+    }
+    public double getBalance(){
+        return balance;
+    }
+}
+
+public class prct_OPPS {
+    static void main(String[] args) {
+        // studentMarksAgeName;
+        student s1=new student();
+        s1.name="owais";
+        s1.marks=89;
+        s1.age=18;
+        s1.DisplayDetails();
+        student s2=new student();
+        s2.name="sufiyan";
+        s2.age=12;
+        s2.marks=99;
+        s2.DisplayDetails();
+
+        
+        // bankAccountSystem
+        bankAccount h1=new bankAccount();
+        h1.accountHolder="OWAIS";
+        h1.balance=1000;
+        h1.depositAmount(1000);
+        h1.withDrawAmount(200);
+
+        System.out.println(h1.getBalance());
+
+    }
+
+    }
